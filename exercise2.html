@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercise 2</title>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- Include fullPage.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section">
+            <h1>Section 1</h1>
+        </div>
+        <div class="section">
+            <h1>Section 2</h1>
+        </div>
+        <div class="section">
+            <div class="slide">
+                <h2>Slide 1</h2>
+                <p>Content for slide 1.</p>
+            </div>
+            <div class="slide">
+                <h2>Slide 2</h2>
+                <p>Content for slide 2.</p>
+            </div>
+            <div class="slide">
+                <h2>Slide 3</h2>
+                <p>Content for slide 3.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include fullPage.js -->
+    <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#03A9F4', '#2ECC71', '#00BCD4'],
+                navigation: true,
+                navigationPosition: 'right'
+            });
+        });
+    </script>
+</body>
+
+</html>

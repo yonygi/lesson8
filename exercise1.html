@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ABOUT ME</title>
+
+    <!-- Include Anime.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        #animation-container {
+            padding: 35px;
+        }
+
+        img {
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="animation-container">
+        <h2 id="name">about me</h2>
+        <img id="photo" src="images/me.jpg" alt="Photo" width="200"><br>
+        <p id="description">hi, i am <b>yongyi</b>!<br>
+            age: 18<br>
+            job title: student<br>
+            i love <a href="food.html">dumplings</a></p>
+    </div>
+
+    <script>
+        const nameAnimation = anime({
+            targets: '#name',
+            translateY: [-50, 0],
+            opacity: [0, 1],
+            duration: 800,
+            easing: 'easeInOutQuad',
+        });
+
+        const photoAnimation = anime({
+            targets: '#photo',
+            translateY: [50, 0],
+            opacity: [0, 1],
+            duration: 800,
+            easing: 'easeInOutQuad',
+        });
+
+        const descriptionAnimation = anime({
+            targets: '#description > *',
+            translateY: [50, 0],
+            opacity: [0, 1],
+            delay: anime.stagger(300),
+            easing: 'easeInOutQuad',
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            nameAnimation.play();
+            photoAnimation.play();
+            descriptionAnimation.play();
+        });
+    </script>
+</body>
+
+</html>
